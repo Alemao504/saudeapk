@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Saúde em Foco</title>
+  <meta name="description" content="Plataforma de educação médica com sorteio de temas, quiz, joguinho e simulado para estudantes da saúde." />
+  <meta name="theme-color" content="#1a1c2a" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <!-- Ponto de montagem do app -->
+  <div id="app"></div>
+
+  <!-- Dados e utilitários (carregam primeiro) -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/animations.js"></script>
+
+  <!-- Telas -->
+  <script src="js/login.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/joguinho.js"></script>
+  <script src="js/simulado.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/overlays.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/intro.js"></script>
+
+  <!-- Roteador (carrega por último) -->
+  <script src="js/app.js"></script>
+</body>
+</html>

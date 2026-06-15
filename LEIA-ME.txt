@@ -1,0 +1,31 @@
+SAÚDE EM FOCO — app em HTML + CSS + JavaScript
+================================================
+
+COMO ABRIR
+----------
+NO PC (Windows): clique duas vezes em  index.html
+NO CELULAR: o Android bloqueia abrir direto. Use uma destas opções:
+  a) Publique a pasta no GitHub Pages ou Netlify Drop (vira um link https).
+  b) Use um app "servidor web" (ex: KSWEB) apontando para esta pasta.
+
+ESTRUTURA
+---------
+index.html   -> a página principal (abra este)
+css/         -> estilos (style.css = base/fontes/animações, components.css = telas)
+js/          -> código por tela (login, home, quiz, joguinho, simulado, intro...)
+img/         -> imagens
+video/       -> vídeos (intro.mp4 + 1.mp4 ... 20.mp4, um por tema)
+audio/       -> áudios
+fonts/       -> fontes do app
+
+VÍDEOS
+------
+- video/intro.mp4  -> toca após o login (~24s, sem pular).
+- video/1.mp4 ... 20.mp4 -> um por tema (veja a ordem em video/README.txt).
+- Para trocar, basta substituir o arquivo pelo seu, com o mesmo nome.
+- Os vídeos atuais são exemplos curtos.
+
+LOGIN
+-----
+- Sempre pede login ao abrir/voltar (dados continuam salvos).
+- Admin: admin@saudeemfoco.com / admin2024 (entra direto, sem intro).
