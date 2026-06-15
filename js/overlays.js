@@ -49,9 +49,18 @@
    */
   function player(theme, onClose) {
     const videos = Storage.getVideos();
-    // Prioridade: vídeo cadastrado no admin; senão, arquivo local video/N.mp4
-    // (N = número do tema). Basta colocar 1.mp4, 2.mp4... na pasta video/.
-    const url = videos[String(theme.num)] || `video/${theme.num}.mp4`;
+    // Prioridade: vídeo cadastrado no admin; senão, arquivo local com nome do tema.
+    const VIDEO_NAMES = {
+      1: "pressao_alta", 2: "diabetes", 3: "automedicacao",
+      4: "ansiedade_e_estresse", 5: "depressao", 6: "sedentarismo",
+      7: "obesidade", 8: "dengue", 9: "falta_de_vacinacao",
+      10: "saude_da_mulher", 11: "gravidez_na_adolescencia", 12: "ists",
+      13: "alcool_e_drogas", 14: "higiene_pessoal", 15: "saude_do_idoso",
+      16: "alimentacao_infantil", 17: "saude_bucal", 18: "insonia",
+      19: "desidratacao", 20: "covid19_e_respiratorias",
+    };
+    const localName = VIDEO_NAMES[theme.num] || String(theme.num);
+    const url = videos[String(theme.num)] || `video/${localName}.mp4`;
 
     const ov = el("div", { class: "player" });
     const closeBtn = el("button", {
