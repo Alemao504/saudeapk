@@ -7,11 +7,6 @@
    ========================================================================= */
 
 window.IntroScreen = (function () {
-  const SOURCES = [
-    { src: "video/intro.mp4", type: "video/mp4" },
-    { src: "video/intro.webm", type: "video/webm" },
-  ];
-
   function render(root, { onFinish }) {
     DOM.clear(root);
 
@@ -24,17 +19,10 @@ window.IntroScreen = (function () {
 
     const video = DOM.el("video", {
       class: "intro-video",
-      attrs: { autoplay: "", playsinline: "", preload: "auto" },
-      on: { ended: finish },
+      attrs: { autoplay: "", playsinline: "", preload: "auto", src: "video/intro.mp4" },
+      on: { ended: finish, error: finish },
     });
-    video.controls = false; // sem controles: não dá para pular
-
-    SOURCES.forEach(function (s) {
-      video.appendChild(DOM.el("source", { attrs: { src: s.src, type: s.type } }));
-    });
-
-    // Só libera por erro se NENHUM source puder ser tocado
-    video.addEventListener("error", finish);
+    video.controls = false;
 
     const wrap = DOM.el("div", { class: "intro-screen" }, [video]);
     root.appendChild(wrap);
